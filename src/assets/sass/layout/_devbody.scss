@@ -1,0 +1,109 @@
+@import '../theme/button';
+@import url('https://fonts.googleapis.com/css?family=Poppins:200&display=swap');
+
+.dev{
+    background-color: $colorBlue;
+
+    .body-dev{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .dev-card{
+        padding-top: 75px;
+    }
+
+    .button-dev{
+        text-align: center;
+        padding-bottom: 55px;
+
+        .button-lien{
+            text-decoration: none;
+            color: $colorWhite;
+            border: 3px solid $colorWhite;
+            padding: 10px 40px;
+            font-family: $Montserrat;
+            font-size: 21px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+
+            &:hover{
+                color: $colorBlack;
+            }
+
+            &::after{
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: $colorWhite;
+                z-index: -1;
+                border-radius: 0 0 50% 50%;
+                transition: all 0.5s;
+            }
+        }
+        .button-lien:hover::after{
+            height: 100%;
+            transition: all 0.5s;
+        }
+    }
+
+    .title-dev{
+        text-align: center;
+
+        p{
+            margin: 0;
+            color: #FFFFFF;	
+            font-family: $Montserrat;	
+            font-size: 52px;	
+            font-weight: bold;	
+            letter-spacing: 10px;
+        }
+    }
+    .text-dev{
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 35px;
+        color: $colorWhite;
+        font-family: "Poppins";
+        font-size: 15px;
+        line-height: 29px;
+        
+        p{
+            margin: 0;
+            font-weight: 100;
+        }
+    }
+
+    .dev__item{
+        padding-top: 85px;
+        padding-bottom: 85px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        .flex__item{
+            margin: 0 28px;
+        }
+        
+
+        p{
+            padding-top: 20px;
+            margin: 0;
+            text-align: center;
+            color: $colorWhite;
+            font-family: "Poppins";
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.87px;
+        }
+        // .paragraphe{
+        //     width: 160px;
+        // }
+    }
+}
