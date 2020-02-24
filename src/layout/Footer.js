@@ -1,27 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from '../assets/svg/logo-footer.svg';
+
 
 
  class Footer extends Component {
     render(){
         return (
-            <div>
-                <div className = "footer-down">
+                <footer className = "footer-down">
                     <div className="logo-footer">
-                        <a href="/">Logo</a>
+                        <a href="/"> <img src = { logo } alt ="logo" />  </a>
                     </div>
                     <div className="copy">
                         <p>Copyright 2020</p>
                     </div>
-                  <div className = "social-footer">
-                    <ul>
-                      <li> <a href = "/"> FaceBook </a> </li>
-                      <li> <a href = "/"> FaceBook </a> </li>
-                      <li> <a href = "/"> FaceBook </a> </li>
-                    </ul>
-                  </div>
-                </div>
-            </div>
-            
+                    <div className = "social-footer">
+                      <ul>
+                        <li> <a href = "/" className = "facebook"><i className="fab fa-facebook-f"></i></a></li>
+                        <li> <a href = "/" className = "twitter"><i className="fab fa-twitter"></i></a></li>
+                        <li> <a href = "/" className = "linkedin"> <i className="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                    </div>
+                </footer>
         )
     }
 }

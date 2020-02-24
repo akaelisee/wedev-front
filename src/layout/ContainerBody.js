@@ -6,11 +6,11 @@ import FinalBody from '../Components/FinalBody.js';
 export default class ContainerBody extends Component {
     render() {
         return (
-            <>
+            <div className = "contentBody">
                 <DevBody />
                 <ProjectBody />
                 <FinalBody />
-            </>
+            </div>
         )
     }
 }
