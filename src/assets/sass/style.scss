@@ -1,13 +1,14 @@
 @import './base/base';
 @import './theme/button';
 @import './layout/header';
+@import './layout/devbody';
 
 @import './layout/footer';
 
 
-.contentBody{
-    position: relative;
-    z-index: 2;
-    background-color: $colorWhite;
-}
+// .contentBody{
+//     position: relative;
+//     z-index: -2;
+//     background-color: $colorWhite;
+// }
 
