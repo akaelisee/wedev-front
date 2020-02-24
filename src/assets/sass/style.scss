@@ -2,3 +2,12 @@
 @import './theme/button';
 @import './layout/header';
 
+@import './layout/footer';
+
+
+.contentBody{
+    position: relative;
+    z-index: 2;
+    background-color: $colorWhite;
+}
+
