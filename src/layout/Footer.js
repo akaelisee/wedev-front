@@ -5,7 +5,6 @@ import React, { Component } from 'react'
     render(){
         return (
             <div>
-
                 <div className = "footer-down">
                     <div className="logo-footer">
                         <a href="/">Logo</a>

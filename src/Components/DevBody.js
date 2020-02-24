@@ -4,7 +4,7 @@ export default class DevBody extends Component {
     render() {
         return (
             <div className = "dev">
-                <div className = "">
+                <div className = "d">
                     <div className = "button-dev">
                         <button> Voici WeDev </button>
                     </div>
