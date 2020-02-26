@@ -1,5 +1,5 @@
-@import '../theme/button';
-@import url('https://fonts.googleapis.com/css?family=Poppins:200&display=swap');
+@import '../helpers/variables';
+@import '../theme/font';
 
 .dev{
     background-color: $colorBlue;
@@ -22,7 +22,7 @@
             color: $colorWhite;
             border: 3px solid $colorWhite;
             padding: 10px 40px;
-            font-family: $Montserrat;
+            font-family: $fontMontserrat;
             font-size: 21px;
             font-weight: bold;
             position: relative;
@@ -56,8 +56,8 @@
 
         p{
             margin: 0;
-            color: #FFFFFF;	
-            font-family: $Montserrat;	
+            color: $colorWhite;	
+            font-family: $fontMontserrat;	
             font-size: 52px;	
             font-weight: bold;	
             letter-spacing: 10px;
@@ -69,7 +69,7 @@
         text-align: center;
         padding-top: 35px;
         color: $colorWhite;
-        font-family: "Poppins";
+        font-family: $fontPoppins;
         font-size: 15px;
         line-height: 29px;
         
@@ -97,13 +97,13 @@
             margin: 0;
             text-align: center;
             color: $colorWhite;
-            font-family: "Poppins";
+            font-family: $fontPoppins;
             font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 1.87px;
+            font-weight: 600;
+            letter-spacing: 2.2px;
         }
         .paragraphe{
-             width: 160px;
+             width: 180px;
         }
     }
 }

@@ -1,5 +1,5 @@
-@import '../theme/button';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+@import '../helpers/variables';
+@import '../theme/font';
 
 .header__main{
     background-image: url("../../img/hero.png");
@@ -29,7 +29,7 @@
         align-items: center;
         height: 85px;
         background-color: $colorWhite;
-        box-shadow: 0px 1px 3px 0px black;
+        box-shadow: 0px 1px 3px 1px $colorBlack;
 
     }
 
@@ -42,9 +42,9 @@
         padding-right: 25px;
 
         a{
-            font-family: 'Montserrat';
+            font-family: $fontMontserrat;
             padding: 15px 50px;
-            background: #ECF0F1;
+            background: $colorLightGrey;
             border: 2px solid $colorDarkBlue;
             border-radius: 27.5px;
             font-size: 14px;
@@ -55,8 +55,8 @@
             font-weight: 600;
 
             &:hover{
-                background: rgb(221, 226, 228);
-                color: #000;
+                background: rgb(228, 232, 233);
+                color: $colorBlack;
                 transition: 0.5s;
             }
         }
@@ -70,7 +70,7 @@
 
         .header-desc{
             padding-left: 110px;
-            font-family: 'Montserrat';
+            font-family: $fontMontserrat;
             transition: 0.8s;
 
             p{
@@ -99,8 +99,8 @@
                 z-index: 2;
 
                 &:hover{
-                    background: $colorDarkBlue;
-                    border: 2px solid $colorWhite;
+                    background-color : $bgBlue;
+                    border: 2px solid $bgBlue;
                 }
             }
 
@@ -181,7 +181,7 @@
 
                 .active{
                     color: $colorWhite;
-                    font-family: 'Montserrat';
+                    font-family: $fontMontserrat;
                     font-weight: bold;
                     border: 1px solid $colorWhite;
                     border-radius: 27.5px;

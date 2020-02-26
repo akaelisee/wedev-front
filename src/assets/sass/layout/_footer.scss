@@ -1,4 +1,5 @@
-@import '../theme/button';
+@import '../helpers/variables';
+@import '../theme/font';
 
 footer{
     background-color: $colorDarkBlue;
@@ -15,7 +16,7 @@ footer{
         p{
             margin: 0;	
             color: $colorWhite;	
-            font-family: 'Montserrat';	
+            font-family: $fontMontserrat;	
             font-size: 13px;	
             letter-spacing: 1.86px;
         }

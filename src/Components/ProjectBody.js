@@ -5,35 +5,38 @@ export default class ProjectBody extends Component {
     render() {
         return (
             <div className= "projects">
-                <div className="outils">
-                    {/*outils */}
-                    <Link to ="/">Comment ça marche ?</Link>
-                    <p className="texte-outil">
-                        Tous vos outils de dev
-                        réuni sur une
-                        seule application</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur
-                       adipiscing elit, sed do eiusmod tempor incididunt 
-                       ut labore et dolore magna aliqua.</p>
-                </div>
-                <div className="projetsprint">
-                    <div className="projet">
-                        <p><span>1</span><strong> Créer vos projets</strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua.</p>
+                <div className = "project-outils">
+                    <div className="outils">
+                        {/*outils */}
+                        <Link to ="/" className="lien-info">Comment ça marche ?</Link>
+                        <p className="texte-outil"> Tous vos outils de dev <br/> réuni sur une <br/> seule application</p>
+
+                        <p className="text-outil-down">Lorem ipsum dolor sit amet, consectetur <br/>
+                            adipiscing elit, sed do eiusmod tempor incididunt <br/> ut labore et dolore magna aliqua.</p>
+
                     </div>
-                    <div className="sprint">
-                        <p><span>2</span><strong> Ajouter vos sprints</strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                           adipiscing elit, sed do eiusmod tempor incididunt 
-                           ut labore et dolore magna aliqua.</p>
-                    </div>
-                    <div className="taches">
-                        <p><span>3</span><strong> Affecter vos tâches</strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur 
-                           adipiscing elit, sed do eiusmod tempor incididunt 
-                           ut labore et dolore magna aliqua.</p>
+                    <div className="projetsprint">
+                        <div className="projet">
+                            <label> 1 </label>
+                            <p className="position"> Créer vos projets </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div className="sprint">
+                            <label> 2 </label>
+                            <p className="position">  Ajouter vos sprints </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div className="taches">
+                            <label>3 </label>
+                            <p className="position"> Affecter vos tâches </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua.</p>
+                        </div>
                     </div>
                 </div>
             </div>

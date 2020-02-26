@@ -1,7 +1,12 @@
+@import './helpers/reset';
 @import './base/base';
+@import './helpers/variables';
+@import './theme/font';
 @import './theme/button';
 @import './layout/header';
 @import './layout/devbody';
+@import './layout/projectbody';
+@import './layout/finalbody';
 
 @import './layout/footer';
 
