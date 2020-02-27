@@ -7,7 +7,8 @@ footer{
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     height: 110px;
-
+    position: relative;
+    z-index: 2;
     .logo-footer{
         padding-left: 40px;
     }

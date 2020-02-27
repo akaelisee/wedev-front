@@ -5,22 +5,23 @@
     background-image: url("../../img/bg-img.png");
     // background-size: cover;
     background-size: 100%  800px;
-    height: 100vh;
+    height: 900px;
     background-repeat: no-repeat;
     background-position: center center;
-    padding-top: 230px;
+    padding-top: 300px;
     background-attachment: fixed;
+    position: relative;
+    z-index: 2;
     .card-final{
         background-color : $colorWhite;
-        width: 68.33%;
+        width: 1100px;
         margin: 0 auto;
         box-shadow: 3px 3px 30px $colorBlack;
         height: 340px;
         text-align: center;
-        // padding: 50px;
 
         .title-final{
-            padding-top: 76px;
+            padding-top: 96px;
 
             label{
                 // color: $colorEmeraud;
@@ -35,7 +36,7 @@
         .text-final{
             padding-top: 25px;
             p{
-                width: 50%;
+                // width: 50%;
                 margin: 0 auto;
                 color: $colorBlack;
                 font-family: $fontPoppins;
@@ -52,7 +53,7 @@
             padding-top: 55px;
 
             .lien{
-                width: 181px;
+                // width: 181px;
                 color: $colorWhite;
                 text-decoration: none;
                 background-color: $colorEmeraud;
