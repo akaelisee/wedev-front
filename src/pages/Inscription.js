@@ -20,8 +20,10 @@ export default class Inscription extends Component {
                    <input type="checkbox" className="form-check-input" id="checked"/>
                    <label className="form-check-label" for="checked">Se souvenir de moi</label>
                </div>
-               <button type="submit" className="btn btn-primary">Inscription</button>
-               <button type="reset" className="btn btn-danger">Annuler</button>
+               <div className= "form-group">
+                    <input type="submit" value="Valider"/>
+                    <input type="reset" value="Annuler"/>
+               </div>
            </form>
         )
     }

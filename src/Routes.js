@@ -10,7 +10,7 @@ export class Routes extends Component {
             <Fragment>
                 <Route exact path = "/" component = { Home } />
                 <Route exact path = "/profil" component ={Profil}/>
-                <Route exact path = "/inscritpion" component={Inscription}/>
+                <Route exact path = "/inscription" component={Inscription}/>
             </Fragment>
         )
     }

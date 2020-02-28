@@ -71,7 +71,7 @@ import reactCSS from 'reactcss';
                      <Link to = "/"> <img src = { logo } alt ="" /> </Link> 
                    </div>
                    <div className = "login_button">
-                      <a href = "/"> LOGIN </a>
+                      <a href = "/Profil"> LOGIN </a>
                    </div>
                 </nav>
                 <div className = { this.state.scrolledLeft ? 'header-inscrit' : 'header-inscrit'}  

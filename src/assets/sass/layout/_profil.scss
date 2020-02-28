@@ -4,23 +4,64 @@
 .profil{
     
     position: relative;
-  
-
+    left : 0;
+    right : 0;
+    top: 3px;
+    // height: 100px;
+    // background-color: red;
     .cadre-profil{
         width: 50%;
         margin:0 auto;
-        margin-top: 150px;
-        background-color: $colorWhite;
-        border:1px solid $colorBlack;
+        height: 100%;
+        // margin-top: 13.9%;
+        // background-color: $colorWhite;
+        // border:1px solid $colorBlack;
         box-shadow: 0px 1px 5px $colorBlack;
+        padding: 50px;
+        position : relative;
+        background-color: red;
+        // left : 25%;
+
+    }
+
+    .file{
+        position: absolute;
+        left: 51px;
+        top: 90px;
+        // padding-bottom: 100px;
+        // padding: 50px 0 100px 0;
+
+        label{ 
+            padding : 70px 25px 70px 25px;
+            border : 1px solid $colorBlack;
+            border-radius: 3px;
+            
+        }
+        input[type="file"]{
+            display: none;
+        }
+    }
+
+    .user-profil{
+        padding-top: 170px;
     }
 
     .form-group{
+        padding: 10px;
+    }
+
+    .form-profil{
+        // padding-top: 30px;
         font-family: $fontMontserrat;
 
         label{
-            width:100px;
+            float: left;
         }
+
+        div{
+            padding: 0px 0 0 200px;
+        }
+
     }
 
 }
