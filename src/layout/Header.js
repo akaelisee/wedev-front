@@ -35,8 +35,6 @@ import logo from '../assets/svg/logo.svg';
         }else{
           this.setState({ scrolled : false})
         }
-        
-        
       });
     }
   
@@ -51,7 +49,7 @@ import logo from '../assets/svg/logo.svg';
               <div className="header-fixed">
                   <nav className = {this.state.scrolled ? 'scroll' : 'header-nav'}>
                     <div className = "logo">
-                      <Link to = "/"> <img src = { logo } alt ="" /> </Link> 
+                      <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
                     </div>
                     <div className = "login_button">
                         <a href = "/"> LOGIN </a>
