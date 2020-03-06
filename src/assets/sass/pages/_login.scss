@@ -1,0 +1,175 @@
+@import '../helpers/variables';
+@import '../theme/font';
+
+.logo-login{
+  img{
+    padding: 20px;
+    width: 180px;
+  }
+}
+.login{
+  padding-top: 4.3%;
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid $colorDarkBlue;
+    box-sizing: border-box;
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: $colorEmeraud;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: $colorWhite;
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    color: $colorBlack;
+    border: 2px solid $colorBlack;
+  }
+  .submitbtn{   
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    letter-spacing: 2.47px;
+  }
+  .from-group{
+    font-size: 16px;
+    padding: 5px 0;
+    label{
+      font-weight: 400px;
+      font-family: $fontMontserrat;
+    }
+  }
+  .remember{
+    padding-top: 15px;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    padding-bottom: 16px;
+  }
+
+  .title{
+    position: relative;
+    top: 0;
+    left: 40%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: $fontMontserrat;
+    color: $colorEmeraud;
+}
+  
+  .container-login {
+    padding: 25px;
+  }
+  
+  span.account {
+    float: right;
+    padding-top: 16px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: $fontMontserrat;
+    a{
+      text-decoration: none;
+    }
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 0 auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    box-shadow: 0px 1px 5px $colorBlack;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+      position: absolute;
+      right: 20px;
+      top: -10px;
+      color: #000;
+      font-size: 35px;
+      font-family: $fontMontserrat;
+      font-weight: bold;
+      transition: 0.4s;
+
+      &:hover{
+          transition: 0.4s;
+         transform: rotate(85deg);
+      }
+
+  }
+  
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/svg/logo.svg';
+// import Login from '../pages/Login';
   class Header extends Component {
 
     constructor(props){
@@ -8,7 +9,10 @@ import logo from '../assets/svg/logo.svg';
   
       this.state = {
         scrolled : false,
-        scrolledLeft : false
+        scrolledLeft : false,
+        loginShow : false,
+        messageToto: "D'accord Maman"
+
       }
     }
   
@@ -38,9 +42,10 @@ import logo from '../assets/svg/logo.svg';
       });
     }
   
-    componentWillUnmount() {
-      window.removeEventListener('scroll');
-    }
+    // componentWillUnmount() {
+    //   window.removeEventListener('scroll');
+    // }
+      
 
     render(){
         return (
@@ -52,7 +57,7 @@ import logo from '../assets/svg/logo.svg';
                       <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
                     </div>
                     <div className = "login_button">
-                        <a href = "/"> LOGIN </a>
+                        <Link to="/login" className="login-link"> Login </Link>
                     </div>
                   </nav>
               </div>  
@@ -60,7 +65,7 @@ import logo from '../assets/svg/logo.svg';
                   <div className = "header-desc">
                     <p> Où que vous soyez </p>
                     <p> Restez <span> Freelance </span></p>
-                    <a href = "/" className= "inscris"> INSCRIVEZ-VOUS </a> 
+                    <Link to = "/inscription" className= "inscris"> INSCRIVEZ-VOUS </Link> 
                   </div>
               </div>    
               <div className = "header-down">
