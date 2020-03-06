@@ -3,6 +3,7 @@ import {Route, withRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 import Inscription from './pages/Inscription';
+import Projets from './pages/Projets';
 
 export class Routes extends Component {
     render(){
@@ -11,6 +12,7 @@ export class Routes extends Component {
                 <Route exact path = "/" component = { Home } />
                 <Route exact path = "/profil" component ={Profil}/>
                 <Route exact path = "/inscription" component={Inscription}/>
+                
             </Fragment>
         )
     }
