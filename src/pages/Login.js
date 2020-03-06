@@ -4,9 +4,9 @@ import logo from '../assets/svg/logo.svg';
 import { Redirect } from 'react-router-dom';
 
 
+var sha1 = require('sha1')
 
 export class Login extends Component {
-
     constructor(props) {
         super(props)
     
@@ -17,6 +17,7 @@ export class Login extends Component {
         }
 
         this.handleChange = this.handleChange.bind(this) 
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(e){
@@ -25,6 +26,22 @@ export class Login extends Component {
         })
     }
   
+    handleSubmit(event)
+    {
+        let form = new FormData();
+        
+        form.append('mail', this.state.mail)
+        form.append('password', sha1(this.state.password))
+
+        fetch("https://vast-headland-40106.herokuapp.com/login", {
+            headers: {},
+            method : "POST",
+            body: form
+        })
+        // redirection vers le DashBoard
+        event.preventDefault()
+    }
+
     componentDidMount(){
         // fetch
     }
@@ -48,7 +65,7 @@ export class Login extends Component {
                     <Link to = "/" className="img-login"> <img src = { logo } alt ="" /> </Link>
                 </div>
             <div className="login">
-                <form className="modal-content animate">
+                <form className="modal-content animate" onSubmit={this.handleSubmit}>
                     <div className="imgcontainer">
                         {this.renderRedirect()}
                         <span onClick={this.setRedirect} className="close" title="Close Modal">&times;</span>
