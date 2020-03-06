@@ -6,7 +6,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
-    height: 800px;
+    height: 100vh;
 
     .header-fixed{
         position: relative;
@@ -31,7 +31,7 @@
         right: 0;
         left: 0;
         display: flex;
-        padding-bottom: 25px;
+        padding-bottom: 28px;
         justify-content: space-between;
         align-items: center;
         height: 85px;
@@ -41,16 +41,27 @@
     .logo{
         padding-top: 20px;
         padding-left: 25px;
-  
-        @media only  screen  and (max-width : 860px)
-        {
-            // width: 100px;
-            // height: 100px;
+
+        .logo-lien{
+           
+            img{   
+                @media only  screen  and (max-width : 860px)
+                {
+                    width: 150px;
+                    height: 30px;
+                }
+            }
         }
+        
     }
     .login_button{
         padding-top: 35px;
         padding-right: 25px;
+
+        @media only  screen  and (max-width : 860px)
+        {
+            padding-top: 28px;
+        }
 
         a{
             font-family: $fontMontserrat;
@@ -63,13 +74,15 @@
             letter-spacing: 4.44px;
             text-decoration: none;
             transition: 0.5s;
+            cursor: pointer;
             font-weight: 600;
+            outline: none;
 
             
             @media only  screen  and (max-width : 860px)
             {
-                padding: 10px 20px;
-                font-size: 10px;
+                padding: 10px 30px;
+                font-size: 15px;
             }
 
             &:hover{
@@ -100,9 +113,22 @@
                 font-size: 39px;
                 padding: 4px;
                 font-weight: 600;
+
+                @media only  screen  and (max-width : 860px)
+                {
+                   transition: all 0.4s;
+                   font-size: 25px;
+                }
+
                 span{
                     font-size: 41px;
                     font-weight: 700;
+
+                    @media only  screen  and (max-width : 860px)
+                    {
+                        transition: all 0.4s;
+                        font-size: 30px;
+                    }
                 }
                 &:nth-child(2){
                     padding-bottom: 50px;
@@ -121,6 +147,14 @@
                 transition: 0.5s;
                 z-index: 2;
 
+                @media only  screen  and (max-width : 860px)
+                {
+                    transition: all 0.4s;
+                    font-size: 13px;
+                    padding: 10px 18px;
+                    letter-spacing: 3.44px;	
+                }
+
                 &:hover{
                     background-color : $bgBlue;
                     border: 2px solid $bgBlue;
@@ -131,10 +165,15 @@
 
     .header-down{
         position: relative;
-        top: 710px;
+        top: 90%;
 
         .social{
             float: left;
+
+            @media only  screen  and (max-width : 860px)
+            {
+                background-color: red;
+            }
 
             ul{
                 list-style: none;
