@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../assets/svg/logo.svg';
 import { Redirect } from 'react-router-dom';
-
-
 
 export class Login extends Component {
 
@@ -24,40 +21,32 @@ export class Login extends Component {
             [e.target.name] : e.target.value
         })
     }
-  
-    componentDidMount(){
-        // fetch
-    }
 
-    // Redirect Home
+    // Redirect 
     setRedirect = () => {
         this.setState({
             redirect: true
         })
     }
-
     renderRedirect = () =>{
         if(this.state.redirect)
-        return <Redirect to="/" />
+        return <Redirect to="/dashboard" />
     }
 
     render() {
         return (
-            <div className="group-login">
-                <div className="logo-login">
-                    <Link to = "/" className="img-login"> <img src = { logo } alt ="" /> </Link>
-                </div>
             <div className="login">
                 <form className="modal-content animate">
                     <div className="imgcontainer">
-                        {this.renderRedirect()}
-                        <span onClick={this.setRedirect} className="close" title="Close Modal">&times;</span>
+                        <span onClick={this.props.popUp} className="close" title="Close Modal">&times;</span>
                     </div>
-                    <span className="title">Connexion</span>
+                    <div className="login-title">
+                        <span className="title">Connexion</span>
+                    </div>
                     <div className="container-login">
                         <div className="from-group">
                             <label htmlFor="mail"><b>Email</b></label>
-                            <input type="text" placeholder="Example@gmail" name="mail" onChange={e=>this.handleChange(e)} value={this.state.mail} required/>
+                            <input type="text" placeholder="Example@ynov.com" name="mail" onChange={e=>this.handleChange(e)} value={this.state.mail} required/>
                         </div>
                         <div className="from-group">
                             <label htmlFor="password"><b>Password</b></label>
@@ -65,18 +54,11 @@ export class Login extends Component {
                         </div>
                         
                         <button type="submit" className="submitbtn">Login</button>
-                        <div className="remember">
-                            <label>
-                                <input type="checkbox" name="remember"/> Remember me
-                            </label>
-                        </div>
                     </div>
-                    <div className="container-login">
-                        <button type="button" onClick={this.setRedirect} className="cancelbtn">Cancel</button>
-                        <span className="account"><Link to="/inscription" className="">Create Account </Link></span>
+                    <div className="container-login-account">
+                        <span className="account"> Creer votre &nbsp;<Link to="/inscription" className="">Compte </Link></span>
                     </div>
                 </form>
-            </div>
             </div>
 
         )

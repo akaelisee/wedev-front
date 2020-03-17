@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/svg/logo.svg';
+import Login from '../pages/Login'
 // import Login from '../pages/Login';
   class Header extends Component {
 
@@ -10,10 +11,23 @@ import logo from '../assets/svg/logo.svg';
       this.state = {
         scrolled : false,
         scrolledLeft : false,
-        loginShow : false,
-        messageToto: "D'accord Maman"
-
+        showPopup : false
       }
+      this.togglePopup = this.togglePopup.bind(this);
+      this.closePopup  = this.closePopup.bind(this)
+    }
+    // state login true
+    togglePopup() {
+      this.setState({
+        showPopup : true
+      })
+    }
+
+    // state login false
+    closePopup() {
+      this.setState({
+        showPopup : false
+      })
     }
   
     componentDidMount() {
@@ -57,9 +71,10 @@ import logo from '../assets/svg/logo.svg';
                       <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
                     </div>
                     <div className = "login_button">
-                        <Link to="/login" className="login-link"> Login </Link>
+                        <Link to="" onClick = {this.togglePopup} className="login-link"> Login </Link>
                     </div>
                   </nav>
+                  {this.state.showPopup ? <Login popUp={this.closePopup}/>: null}
               </div>  
               <div className = "header-inscrit">
                   <div className = "header-desc">
