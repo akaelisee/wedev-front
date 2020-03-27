@@ -10,6 +10,7 @@ import Project from './pages/Projects/Project';
 import AddCustomer from './pages/Customer/AddCustomer'
 import EditCustomer from './pages/Customer/EditCustomer';
 import AddProject from './pages/Projects/AddProject';
+import EditProject from './pages/Projects/EditProject';
 
 
 export class Routes extends Component {
@@ -26,6 +27,7 @@ export class Routes extends Component {
                 <Route exact path = "/client/edit" component = { EditCustomer } />
                 <Route exact path = "/projet" component = { Project } />
                 <Route exact path = "/projet/add" component = { AddProject } />
+                <Route exact path = "/projet/add" component = { EditProject } />
             </Fragment>
         )
     }
