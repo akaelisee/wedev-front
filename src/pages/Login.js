@@ -38,7 +38,8 @@ export class Login extends Component {
             method : "POST",
             body: form
         })
-        // redirection vers le DashBoard
+        .then(resp => {return(resp.json())})
+        .then(data => console.log('JSON => ', data))
         event.preventDefault()
     }
 
