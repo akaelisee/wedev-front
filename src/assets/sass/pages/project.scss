@@ -1,0 +1,390 @@
+@import './helpers/variables';
+@import './theme/font';
+
+
+// List project
+.main-project{
+    width: 90%;
+    margin: 15px auto;
+
+    .title-btn{
+        position: relative;
+        margin-bottom: 10px;
+        h2{
+            padding: 15px 0;
+            font-size: 25px;
+            font-weight: 600;
+            font-family: $fontMontserrat;
+        }
+        a{
+            position: absolute;
+            top: 16px;
+            right: 0px;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: $fontMontserrat;
+            background-color: $colorBlue;
+            color: $colorWhite;
+            border-radius: 5px;
+            transition: 0.4s;
+            text-decoration: none;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .search-project{
+        border: 1px solid $colorBorder;
+        padding: 10px 0;
+        width: 25%;
+        border-radius: 3px;
+        position: relative;
+
+        input{
+            border: none;
+            background-color: $colorGreyBody;
+            font-size: 18px;
+            outline: none;
+            margin-left: 10px;
+            width: 70%;
+        }
+        a{
+            color: $colorBlack;
+            text-decoration: none;
+            transition: 0.4s;
+            &:hover{
+                color: #000;
+                transition: 0.4s;
+            }
+            i{
+                position: absolute;
+                right: 20px;
+                top: 11px;
+                font-size: 18px;
+            }
+
+        }
+    }
+
+    .table-project{
+        margin: 25px 0;
+        font-size: 16px;
+        font-family: $fontMontserrat;
+        table{
+            width: 60%;
+            border-collapse: collapse;
+            text-align: center;
+
+            .list-project{
+                // background-color: red;
+                th{
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding: 5px 0;
+                    border-bottom: 2px solid $colorBlack;
+                }
+            }
+            tr{
+                .table-first{
+                    text-align: left;
+                }
+                td{
+                    padding: 10px 0;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        float: left;
+                    }
+
+                    .span-project{
+                        position: relative;
+                        top: 5px;
+                        left: 3%;
+                    }
+                    .span-statut{
+                        background-color: $colorEmeraud;
+                        border-radius: 3px;
+                        padding: 2px 5px;
+                        color: $colorWhite;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Nav Porject
+
+.main-add{
+    position: relative;
+    left: 0;
+    right: 0;
+    background-color: $colorWhite;
+    border-bottom: 2px solid $colorWhiteNav;
+    padding: 0;
+
+    .project-nav{
+
+        ul{
+            padding-left: 55px;
+
+            li{
+                list-style: none;
+                display: inline-block;
+                padding: 20px 10px;
+            }
+            
+            a{
+                color: $colorBlack;
+                font-size: 25px;
+                padding: 20px 5px;
+                font-weight: 600;
+                text-decoration: none;
+                position: relative;
+                
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    height: 3px;
+                    width: 0%;
+                    transition: 0.4s;
+                    background-color: $colorOrange;
+                }
+
+                &:focus::after{
+                    transition: 0.4s;
+                    width: 100%;
+                }
+            }
+            .link-sprints{
+                width: 100%;
+                &::after{
+                    content: "";
+                    transition: 0.4s;
+                    background-color: purple;
+                    transform: translate(-100%, 0);
+
+                }
+
+                &:focus::after{
+                    transform: translate(0%, 0);
+                }
+            }
+            .link-task{
+                &::after{
+                    content: "";
+                    transition: 0.4s;
+                    background-color: $colorGreenSea;
+                    transform: translate(-100%, 0);
+
+                }
+                &:focus::after{
+                    transform: translate(0%, 0);
+                }
+            }
+        }
+    }
+}
+
+// Add project
+
+.add-project{
+    margin: 55px 0;
+}
+.card{
+    background-color : $colorWhite;
+    width: 60%;
+    margin: 0 auto;
+    // margin-left: 85px;   
+    border: 1px solid $colorWhiteNav;
+
+    .add-title{
+        position: relative;
+        // z-index: 2;
+        .title{
+            position: relative;
+            z-index: 2;
+            padding:  10% 0;
+            h3{
+                font-size: 30px;
+                color: $colorOrange;
+                margin-left: 110px;
+                align-items: center;
+                width: 30%;
+            }
+        }
+
+        .nbr-project{
+            border-bottom: 1px solid $colorWhiteNav;
+            border-left: 1px solid $colorWhiteNav;
+            text-align: center;
+            padding: 5.4% 14%;
+            font-size: 20px;
+            font-family: $fontMontserrat;
+            color: $colorBlack;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background-color: $colorGreyBody;
+            z-index: 1;
+
+            label{
+                font-size: 58px;
+            }
+            p{
+                // margin-top: 10px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .form-add{
+        margin:  0;
+
+        .form-group{
+            margin: 30px;
+            position: relative;
+
+            input{
+                width: 100%;
+                padding: 14px 14px 10px 14px;
+                border: 1px solid $colorBlack;
+                font-size: 14px;
+                border-radius: 5px;
+                transition: 0.2s;
+                font-family: $fontPoppins;
+
+                &:focus{
+                    outline: none;
+                    border: 1px solid $colorOrange;
+                    transition: 0.2s;
+
+                }
+                &:focus + label{
+                    top: -10px;
+                    padding: 0 3px;
+                    font-size: 14px;
+                    color: $colorOrange;
+                    transition: 0.2s;
+                }
+
+                &:valid + label{
+                    top: -10px;
+                    left: 25px;
+                    font-size: 14px;
+                    color: $colorGreyEdit;
+                    transition: 0.4s;
+                }
+            }
+
+            label{
+                position: absolute;
+                left: 13px;
+                top: 10px;
+                padding: 0 3px;
+                color: #8d8d8d;
+                background-color: $colorWhite;
+                font-size: 15px;
+                font-family: $fontPoppins;
+                font-weight: 600;
+                transition: 0.2s;
+                cursor: auto;
+            }
+        }
+
+        .form-textarea{
+            margin: 30px;
+
+            textarea{
+                width: 100%;
+                padding: 5px 14px;
+                border: 1px solid $colorBlack;
+                font-size: 14px;
+                border-radius: 5px;
+                transition: 0.2s;
+                font-family: $fontPoppins;
+                outline: none;
+
+                &:focus{
+                    border: 1px solid $colorOrange;
+                }
+            }
+            
+            label{
+                padding: 0 3px;
+                color: #8d8d8d;
+                background-color: $colorWhite;
+                font-size: 15px;
+                font-family: $fontPoppins;
+                font-weight: 600;
+                transition: 0.2s;
+                cursor: auto;
+            }
+        }
+
+        .row{
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            justify-content: space-between;
+            
+            .form-group{
+                margin: 5px 0px;
+                input{
+                    width: 80%;
+                }
+            }
+        }
+
+        .form-radio{
+            margin: 15px 0;
+            label{
+                padding: 0 10px 0 0;
+                color: #8d8d8d;
+                background-color: $colorWhite;
+                font-size: 15px;
+                font-family: $fontPoppins;
+                font-weight: 600;
+                transition: 0.2s;
+                cursor: auto;               
+            }
+            .label-namee{
+                padding: 0 10px 0 30px;
+            }
+        }
+
+        .btn-link{
+            margin: 25px 0;
+            input, .btn-annul{
+                padding: 10px 15px;
+                font-size: 18px;
+                color: $colorWhite;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                outline: none;
+                transition: 0.4s;
+
+                &:hover{
+                    transition: 0.4s;
+                    opacity: 0.9;
+                }
+            }       
+            .btn-submit{
+                background-color: $colorOrange;
+                margin-left: 30px;
+            }
+            .btn-annul{
+                background-color: $colorGreyEdit;
+                margin-left: 5px;
+                text-decoration: none;
+            }
+        }
+    }
+}
