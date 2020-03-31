@@ -29,38 +29,7 @@ import Login from '../pages/Login'
         showPopup : false
       })
     }
-  
-    componentDidMount() {
-      //Scroll Navbar
-      window.addEventListener('scroll', ()=> {
-        const IsTop = window.scrollY < 730 ;
-
-        let percentIns = (window.scrollY * 100) / 490;
-        percentIns = percentIns > 100 ? 100 : percentIns;
-
-        let percentSocio = (window.scrollY * 100) / 100;
-        percentSocio = percentSocio > 100 ? 100 : percentSocio;
-
-        document.querySelector('.header-inscrit').style.opacity = (1 - (percentIns/100));
-        document.querySelector('.header-down').style.opacity = (1 - (percentSocio/100));
-
-        if(percentSocio === 1){
-            document.querySelector('.header-down').style.visibility = "hidden";
-        }else if (percentSocio < 1){
-          document.querySelector('.header-down').style.visibility = "visible";
-        }else if(IsTop !== true) {
-          this.setState({ scrolled : true})
-        }else{
-          this.setState({ scrolled : false})
-        }
-      });
-    }
-  
-    // componentWillUnmount() {
-    //   window.removeEventListener('scroll');
-    // }
       
-
     render(){
         return (
           //Header
