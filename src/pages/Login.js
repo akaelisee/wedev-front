@@ -40,7 +40,8 @@ export class Login extends Component {
         })
         .then(resp => {return(resp.json())})
         .then(data => console.log('JSON => ', data))
-        event.preventDefault()
+        return (<Redirect push to="/dashboard"></Redirect>)
+        event.preventDefault();
     }
 
     componentDidMount(){

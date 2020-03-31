@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/svg/logo.svg';
 import { Redirect } from 'react-router-dom';
 
+var sha1 = require('sha1')
 // import axios from 'axios';
 
 export class Inscription extends Component {
@@ -15,7 +16,8 @@ export class Inscription extends Component {
             firstname : '',
             name : '',
             mail : '',
-            password : ''
+            password : '',
+            psw_repeat: ''
         }
 
         this.handleChange = this.handleChange.bind(this) 
@@ -43,6 +45,27 @@ export class Inscription extends Component {
         return <Redirect to="/" />
     }
 
+    handleSubmit(event)
+    {
+        let form = new FormData();
+        
+        form.append('firstname', this.state.firstname)
+        form.append('name', this.state.name)
+        form.append('mail', this.state.mail)
+        if (this.state.psw_repeat === this.state.password )
+            form.append('password', sha1(this.state.password))
+        this.setRedirect();
+
+        fetch("https://vast-headland-40106.herokuapp.com/user", {
+            headers: {},
+            method : "POST",
+            body: form
+        })
+        .then(resp => {return(resp.json())})
+        .then(data => console.log('JSON => ', data))
+        event.preventDefault()
+    }
+
     render(){
         return(
             <div className="inscription-group">
@@ -50,7 +73,7 @@ export class Inscription extends Component {
                     <Link to = "/" className="img-inscris"> <img src = { logo } alt ="" /> </Link>
                 </div>
                 <div className="inscris">
-                    <form className="modal-content animate">
+                    <form className="modal-content animate" onSubmit={this.handleSubmit()}>
                         <div className="imgcontainer">
                             {this.renderRedirect()}
                             <span onClick={this.setRedirect} className="close" title="Close Modal">&times;</span>
