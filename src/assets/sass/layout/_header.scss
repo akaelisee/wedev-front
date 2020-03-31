@@ -4,7 +4,7 @@
 .header__main{
     background-image: url("../../img/hero.png");
     background-size: cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-position: top center;
     height: 100vh;
 
@@ -14,31 +14,13 @@
     }
     //navbar
     .header-nav{
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         transition: 0.4s;
         z-index: 4;
     }
-    
-    // Pour le scroll navbar
-    .scroll{
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        display: flex;
-        padding-bottom: 28px;
-        justify-content: space-between;
-        align-items: center;
-        height: 85px;
-        background-color: $colorBlue;
-        box-shadow: 0px 1px 3px 1px $colorBlack;
-    }
+
     .logo{
         padding-top: 20px;
         padding-left: 25px;
@@ -96,7 +78,7 @@
 
     }
     .header-inscrit{
-       position: fixed;
+       position: absolute;
        top: 250px;
        left: 80px;
        transition: .2s;
@@ -166,7 +148,7 @@
 
     .header-down{
         position: relative;
-        top: 90%;
+        top: 80%;
 
         .social{
             float: left;

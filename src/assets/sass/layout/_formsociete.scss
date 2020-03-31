@@ -3,6 +3,7 @@
 
 .body-form{
   padding-top: 30px;
+  
     .form-group{
         width: 87%;
         height: 8vh;
@@ -19,6 +20,8 @@
           outline: none;
           font-size: 14px;
           font-family: $fontPoppins;
+          background-color: #F6F7FB;
+
 
           &:focus + .label-name .content-name, 
           &:valid + .label-name .content-name{
@@ -115,7 +118,7 @@
     font-size: 18px;
     font-weight: 600;
     font-family: $fontMontserrat;
-    background-color: $colorWhite;
+    background-color: #F6F7FB;
     position: relative;
     border: 2px solid $colorBlack;
     cursor: pointer;
