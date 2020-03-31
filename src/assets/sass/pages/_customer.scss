@@ -1,6 +1,14 @@
 @import '../helpers/variables';
 @import '../theme/font';
 
+
+html, body, .app{
+    width: 100%;
+    position: relative;
+    background-color: $colorGreyBody;
+
+}
+
 .customer{
     padding: 25px 0;
     width: 90%;
@@ -29,6 +37,7 @@
         }
     }
 }
+
 .list-customer{
     width: 90%;
     margin: 0 auto;
@@ -84,7 +93,7 @@
 
 //Add customer
 
-.main-add{
+.main-addcusto{
     padding-top: 50px;
 
     .card{
@@ -185,13 +194,6 @@
     }
 }
 
-
-html, body, .app{
-    width: 100%;
-    position: relative;
-    background-color: $colorGreyBody;
-
-}
 
 .close-list{
     position: relative;
@@ -312,7 +314,7 @@ html, body, .app{
         -webkit-animation: animatezoo 0.6s;
         animation: animatezoo 0.6s
         }
-        
+
         @-webkit-keyframes animatezoo {
         from {-webkit-transform: scale(0)} 
         to {-webkit-transform: scale(1)}
