@@ -6,8 +6,8 @@ export class EditProfilInfo extends Component {
     render() {
         const {handleEditInfoFalse} = this.props
         return (
-            <>
-                <div className="form-edit">
+            <form>
+                 <div className="form-edit">
                      <div className="link-btn">
                         <h3 className="edit-title">Vos infos personnelles</h3>
                         <Link className="btn-valid"><i className="fas fa-check"></i></Link>
@@ -45,7 +45,7 @@ export class EditProfilInfo extends Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </form>
         )
     }
 }

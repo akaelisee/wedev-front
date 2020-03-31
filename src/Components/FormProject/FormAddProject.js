@@ -50,18 +50,18 @@ export class FormAddProject extends Component {
                                     required/>
                                 <label htmlFor="name"  className="label-name" >Date de fin</label>
                             </div>
-                            <div className="form-radio">
-                                <label htmlFor="name"  className="label-name" >Encours</label>
-                                <input 
-                                    type="radio" 
-                                    name="phone"
-                                    required/>
-                                <label htmlFor="name"  className="label-namee" >Réalise</label>
-                                <input 
-                                    type="radio" 
-                                    name="phone"
-                                    required/>
-                            </div>
+                        </div>
+                        <div className="form-radio">
+                            <label htmlFor="name"  className="label-name" >Encours</label>
+                            <input 
+                                type="radio" 
+                                name="phone"
+                                required/>
+                            <label htmlFor="name"  className="label-namee" >Réalise</label>
+                            <input 
+                                type="radio" 
+                                name="phone"
+                                required/>
                         </div>
                         <div className="form-group">
                             <input 
@@ -76,6 +76,14 @@ export class FormAddProject extends Component {
                                 name="phone"
                                 required/>
                             <label htmlFor="name"  className="label-name" >Coût horaire jour</label>
+                        </div>
+                        <div className="form-select">
+                            <div className="box-select box">
+                                <select>
+                                    <option value = "back"> Client</option> 
+                                    <option value = "back"> Aka jean elisee</option> 
+                                </select>
+                            </div>
                         </div>
                         <div className="btn-link">
                             <input type="submit" className="btn-submit"/>

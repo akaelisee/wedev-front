@@ -14,7 +14,7 @@ export default class FinalBody extends Component {
                             <p>un accès premium à l'application WeAreData</p>
                         </div>
                         <div className="button-final">
-                            <Link to ="/" className="lien"> JE M'INSCRIS </Link>
+                            <Link to ="/inscription" className="lien"> JE M'INSCRIS </Link>
                         </div>
                     </div>
                 </div>
