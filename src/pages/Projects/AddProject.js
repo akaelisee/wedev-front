@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Dashboard from '../Dashboard'
-import FormAddProject from '../../Components/FormAddProject';
+import {Link} from 'react-router-dom'
+import FormAddProject from '../../Components/FormProject/FormAddProject';
 
 export class AddProject extends Component {
     constructor(props) {
@@ -12,24 +13,6 @@ export class AddProject extends Component {
 
     }
     
-    setStateOngletsProject = () => {
-        this.setState({
-            stateOnglets: 1
-        })
-    }
-
-    setStateOngletsSprints = () => {
-        this.setState({
-            stateOnglets: 2
-        })
-    }
-
-    setStateOngletsTask = () => {
-        this.setState({
-            stateOnglets: 3
-        })
-    }
-    
     render() {
         
         return (
@@ -39,25 +22,16 @@ export class AddProject extends Component {
                 <div className="main-add">
                     <div className="project-nav">
                         <ul>
-                            <a href="#" onClick = {this.setStateOngletsProject} className="link-project"><li>Projet</li></a>
-                            <a href="#" onClick = {this.setStateOngletsSprints} className="link-sprints"><li>Sprints</li></a>
-                            <a href="#" onClick = {this.setStateOngletsTask} className="link-task"><li>Task</li></a>
+                            <Link to="/projet" className="link-project"><li>Projet</li></Link>
+                            <Link to="/sprint" className="link-sprints"><li>Sprints</li></Link>
+                            <Link to="/task"  className="link-task"><li>Tâche</li></Link>
                         </ul>
                     </div>
                 </div>
-                {this.state.stateOnglets === 1 ?
-                    <div>
-                        <FormAddProject />
-                    </div>
-                : this.state.stateOnglets === 2 ?
-                    <div>
-                        two
-                    </div>
-                :
-                    <div>
-                        Three
-                    </div>
-                }
+              
+                <div>
+                    <FormAddProject />
+                </div>
             </div>
             </>
         )

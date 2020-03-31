@@ -27,7 +27,6 @@ export class Customer extends Component {
             showPopup : false
         })
     }
-    
 
     render() {
         return (
@@ -55,7 +54,7 @@ export class Customer extends Component {
                                 <td>
                                     <Link onClick = {this.togglePopup}> <i className="fas fa-eye"></i></Link>
                                     <Link to="/client/edit"> <i className="fas fa-pen"></i></Link>
-                                    <a href="" className="drop"> <i className="fas fa-trash-alt"></i></a>
+                                    <Link to="" className="drop"> <i className="fas fa-trash-alt"></i></Link>
                                 </td>
                             </tr>
                             <tr>

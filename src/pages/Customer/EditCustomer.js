@@ -8,7 +8,7 @@ export class EditCustomer extends Component {
             <>
             <Dashboard />
             <div className ="main">
-                <div className ="main-add">
+                <div className ="main-addcusto">
                     <div className ="card">
                         <div className="title">
                             <h3 className="edit-title">Modification le client : </h3>

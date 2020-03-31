@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import Dashboard from '../Dashboard';
-import {Link} from 'react-router-dom';
-import FormEditProject from '../../Components/FormProject/FormEditProject';
-
-
-
-export class EditProject extends Component {
+import { Link } from 'react-router-dom';
+import FormEditTask from '../../Components/FormTask/FormEditTask';
+export class EditTask extends Component {
     render() {
         return (
             <>
@@ -15,14 +12,14 @@ export class EditProject extends Component {
                     <div className="project-nav">
                         <ul>
                             <Link to="/projet" className="link-project"><li>Projet</li></Link>
-                            <Link to="/sprint" className="link-sprints"><li>Sprints</li></Link>
-                            <Link to="/task" className="link-task"><li>Tâche</li></Link>
+                            <Link to="/sprint" onClick = {this.setStateOngletsSprints} className="link-sprints"><li>Sprints</li></Link>
+                            <Link to="/task" onClick = {this.setStateOngletsTask} className="link-task"><li>Tâche</li></Link>
                         </ul>
                     </div>
                 </div>
               
                 <div>
-                    <FormEditProject />
+                    <FormEditTask />
                 </div>
             </div>
             </>
@@ -30,4 +27,4 @@ export class EditProject extends Component {
     }
 }
 
-export default EditProject
+export default EditTask

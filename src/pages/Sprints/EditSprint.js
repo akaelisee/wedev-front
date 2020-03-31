@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Dashboard from '../Dashboard';
 import {Link} from 'react-router-dom';
-import FormEditProject from '../../Components/FormProject/FormEditProject';
+import FormEditSprint from '../../Components/FormSprint/FormEditSprint';
 
-
-
-export class EditProject extends Component {
+export class EditSprint extends Component {
     render() {
         return (
             <>
-                <Dashboard/>
-                <div className="main">
+            <Dashboard/>
+            <div className="main">
                 <div className="main-add">
                     <div className="project-nav">
                         <ul>
@@ -22,7 +20,7 @@ export class EditProject extends Component {
                 </div>
               
                 <div>
-                    <FormEditProject />
+                    <FormEditSprint />
                 </div>
             </div>
             </>
@@ -30,4 +28,4 @@ export class EditProject extends Component {
     }
 }
 
-export default EditProject
+export default EditSprint

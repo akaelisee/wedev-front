@@ -31,30 +31,30 @@ export class Dashboard extends Component {
                             <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
                         </div>
                         <ul className="side-nav">
-                            <li className="side-items">
-                                <a href="/dashboard">
+                            <Link to="/dashboard">
+                                <li className="side-items">
                                     <span className="icon-holder"><i className="fas fa-tachometer-alt"></i></span>
                                     <span className="title"> Dasboard</span>
-                                </a>
-                            </li>
-                            <li className="side-items">
-                                <Link to ="/profil">
+                                </li>
+                            </Link>
+                            <Link to="/profil">
+                                <li className="side-items">
                                     <span className="icon-holder"> <i className="fas fa-user-alt"></i> </span>
                                     <span className="title">Mon Profil</span>
-                                </Link>
-                            </li>
-                            <li className="side-items">
-                                <a href="/projet">
+                                </li>
+                            </Link>
+                            <Link to="/projet">
+                                <li className="side-items">
                                     <span className="icon-holder"><i className="fas fa-project-diagram"></i></span>
                                     <span className="title">Projet</span>
-                                </a>
-                            </li>
-                            <li className="side-items">
-                                <a href="/client">
+                                </li>
+                            </Link>
+                            <Link to="/client">
+                                <li className="side-items">
                                     <span className="icon-holder"><i className="fas fa-project-diagram"></i></span>
                                     <span className="title">Client</span>
-                                </a>
-                            </li>   
+                                </li>
+                            </Link>  
                         </ul>
                     </div>
                 </div>
@@ -62,10 +62,10 @@ export class Dashboard extends Component {
                     <ul className="header-connect">
                         <li className="header-user">
                             <span className="image-user"> <Link> <img src ={ imageUser} alt="imageUser" /></Link> </span>
-                            <Link onFocus= {this.settingFocus} onBlur={this.settingBlur}> <i className="fas fa-ellipsis-h menu"></i><span className="title">  AKa jean elisee</span></Link>
+                            <Link to="#" className="setting"> <i className="fas fa-ellipsis-h menu"></i><span className="title">  AKa jean elisee</span></Link>
                             <ul className="list-setting anime">
                                 <li>
-                                    <Link to= "/dashboard/profil"  className="lien-item">
+                                    <Link to= "/profil"  className="lien-item">
                                         <span className="icon-connect"><i className="fas fa-user-alt"></i></span>
                                         <span>Mon profil </span>
                                     </Link>
