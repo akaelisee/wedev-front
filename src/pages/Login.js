@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 
+var sha1 = require('sha1')
+
 export class Login extends Component {
 
     constructor(props) {
@@ -22,6 +24,27 @@ export class Login extends Component {
         })
     }
 
+    handleSubmit(e){
+        let form = new FormData()
+
+        form.append("mail", this.state.mail)
+        form.append("password", sha1(this.state.password))
+
+        fetch("https://vast-headland-40106.herokuapp.com/login",
+            {
+                headers: {"Content-Type" : "application/x-www-form-url-encoded"},
+                method: "POST",
+                body: form
+            }
+        )
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err=> console.error(err))
+
+        this.setRedirect()
+        this.renderRedirect()
+    }
+
     // Redirect 
     setRedirect = () => {
         this.setState({
@@ -36,7 +59,7 @@ export class Login extends Component {
     render() {
         return (
             <div className="login">
-                <form className="modal-content animate">
+                <form className="modal-content animate" onSubmit={this.handleSubmit()}>
                     <div className="imgcontainer">
                         <span onClick={this.props.popUp} className="close" title="Close Modal">&times;</span>
                     </div>

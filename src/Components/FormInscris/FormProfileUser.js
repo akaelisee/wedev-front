@@ -5,8 +5,8 @@ export default class FormProfileUser extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            list_status : [],
-            list_profil: [],
+            list_status : {},
+            list_profil: {},
             test: ""
         }
     }
@@ -24,7 +24,7 @@ export default class FormProfileUser extends Component {
                 arr.data.map((item) => {
                     new_tab.push(item.label)
                 })
-            this.setState({list_profil: new_tab})
+            this.setState({list_profil: arr})
         })
             .catch(err => console.error('ERROR: ' , err))
     }
@@ -37,7 +37,7 @@ export default class FormProfileUser extends Component {
                 arr.data.map((item) => {
                     new_tab.push(item.label)
                 })
-                this.setState({list_status: new_tab})
+                this.setState({list_status: arr})
         })
             .catch(err => console.error('ERROR: ' , err))
     }
@@ -60,12 +60,12 @@ export default class FormProfileUser extends Component {
                 statut,
                 profil
                 } = this.props;
-        const all_status = this.state.list_status.map((label) => {
-        return <option>{label}</option>
+        const all_status = this.state.list_status.data.map((item, key) => {
+        return <option value={key}>{item.label}</option>
         })
 
-        const all_profil = this.state.list_profil.map((label) =>{
-            return <option>{label}</option>
+        const all_profil = this.state.list_profil.data.map((item, key) =>{
+            return <option value={key}>{item.label}</option>
         }) 
         return (
             <>

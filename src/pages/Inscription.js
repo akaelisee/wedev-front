@@ -50,7 +50,7 @@ export class Inscription extends Component {
 
         form_user.append("firstname", this.state.firstname)
         form_user.append("name", this.state.name)
-        form_user.append("id_company", this.state.)
+        form_user.append("id_company", this.state.company)
         form_user.append("mail", this.state.firstname)
         form_user.append("phone", this.state.firstname)
         form_user.append("id_profil", this.state.profil)
