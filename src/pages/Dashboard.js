@@ -61,7 +61,7 @@ export class Dashboard extends Component {
                 <div className="header">
                     <ul className="header-connect">
                         <li className="header-user">
-                            <span className="image-user"> <Link> <img src ={ imageUser} alt="imageUser" /></Link> </span>
+                            <span className="image-user">  <img src ={ imageUser} alt="imageUser" /> </span>
                             <Link to="#" className="setting"> <i className="fas fa-ellipsis-h menu"></i><span className="title">  AKa jean elisee</span></Link>
                             <ul className="list-setting anime">
                                 <li>
