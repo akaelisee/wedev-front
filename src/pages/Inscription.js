@@ -28,6 +28,48 @@ export class Inscription extends Component {
         this.setRedirect = this.setRedirect.bind(this)
     }
 
+    handleSubmit(e) {
+        let form_user = new FormData();
+        let form_company = new FormData();
+
+        
+        form_company.append("id_corporate", this.state.statut)
+        form_company.append("label", this.state.compagny)
+        form_company.append("siret", this.state.siret)
+
+        fetch("https://vast-headland-40106.herokuapp.com/api/company", 
+            {
+                method: "POST",
+                body: form_company
+            }
+        )
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+
+
+        form_user.append("firstname", this.state.firstname)
+        form_user.append("name", this.state.name)
+        form_user.append("id_company", this.state.)
+        form_user.append("mail", this.state.firstname)
+        form_user.append("phone", this.state.firstname)
+        form_user.append("id_profil", this.state.profil)
+
+        fetch("https://vast-headland-40106.herokuapp.com/api/user", 
+            {
+                method: "POST",
+                body: form_user
+            }
+        )
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+        
+        // redirect
+        this.setRedirect();
+        this.renderRedirect()
+    }
+
     handleChange =(e)=>{
         this.setState({
             [e.target.name] : e.target.value
@@ -45,7 +87,7 @@ export class Inscription extends Component {
         return <Redirect to="/" />
     }
 
-    //state incrementation form
+    //state incrementation form_user
     nextForm = () =>{
         const {step} = this.state
         this.setState({
@@ -53,7 +95,7 @@ export class Inscription extends Component {
         })
     }
 
-    //state desincrementation form
+    //state desincrementation form_user
     prevForm =()=>{
         const {step} = this.state
         this.setState({
@@ -113,9 +155,9 @@ export class Inscription extends Component {
                         </div>
                     </div>
                     <div className="inscris">
-                        <form className="modal-content">
+                        <form_user className="modal-content" onSubmit={this.handleSubmit()}>
                             {this.showStep()}
-                        </form>
+                        </form_user>
                     </div>
                 </div>
             </div>
