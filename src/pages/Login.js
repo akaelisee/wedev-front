@@ -29,14 +29,15 @@ export class Login extends Component {
 
         form.append("mail", this.state.mail)
         form.append("password", sha1(this.state.password))
-
-        fetch("https://vast-headland-40106.herokuapp.com/login",
-            {
-                headers: {"Content-Type" : "application/x-www-form-url-encoded"},
-                method: "POST",
-                body: form
-            }
-        )
+        
+        const data = new URLSearchParams();
+        for (const pair of form) {
+            data.append(pair[0], pair[1]);
+        }
+        fetch("https://vast-headland-40106.herokuapp.com/login", {
+            method: 'post',
+            body: data,
+        })
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(err=> console.error(err))
