@@ -17,6 +17,7 @@
     "react-scroll": "^1.7.16",
     "react-typed": "^1.2.0",
     "reactcss": "^1.2.3",
+    "sha1": "^1.1.1",
     "ungit": "^1.5.4"
   },
   "scripts": {

@@ -4,6 +4,19 @@ import ImageGrey from '../../assets/img/Capture.PNG'
 import {Link} from 'react-router-dom';
 
 export class ListTask extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            id : '',
+            description : '',
+            start_date : '',
+            end_date : '',
+            label : '', //Label status
+            title : '' // title sprint
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
     render() {
         return (
             <>

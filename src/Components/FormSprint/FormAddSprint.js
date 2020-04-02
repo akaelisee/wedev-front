@@ -2,7 +2,35 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 export class FormAddSprint extends Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             id_sprint : '',
+             title : '',
+             title_project: '', //Titre project
+             description : '',
+             label : '', //Label status
+             completion_time : ''
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange =(e)=>{
+        console.log(e.target.value)
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('d');
+	}
+    
     render() {
+        const {title,  title_project, label,  completion_time} = this.state;
         return (
             <div className="add-sprint">
                 <div className="card">
@@ -15,12 +43,14 @@ export class FormAddSprint extends Component {
                             <p> Sprint Crée</p>
                         </div>
                     </div>
-                    <form className="form-add">
+                    <form className="form-add" onSubmit={this.handleSubmit}>
                         <div className="form-group">
                             <input 
                                 type="text" 
                                 className="form-control" 
-                                name="firstname"
+                                name="title"
+                                onChange={e=>this.handleChange(e)} 
+                                value={title}
                                 required/>
                             <label htmlFor="firstname" className="label-name">Titre du sprint</label>
                         </div>
@@ -28,14 +58,18 @@ export class FormAddSprint extends Component {
                             <div className="form-group">
                                 <input 
                                     type="text" 
-                                    name="phone"
+                                    name="completion_time"
+                                    onChange={e=>this.handleChange(e)} 
+                                    value={completion_time}
                                     required/>
                                 <label htmlFor="name"  className="label-name" >Date de debut</label>
                             </div>
                             <div className="form-group">
                                 <input 
                                     type="text" 
-                                    name="phone"
+                                    name="completion_time"
+                                    onChange={e=>this.handleChange(e)} 
+                                    value={completion_time}
                                     required/>
                                 <label htmlFor="name"  className="label-name" >Date de fin</label>
                             </div>
@@ -44,24 +78,34 @@ export class FormAddSprint extends Component {
                             <label htmlFor="name"  className="label-name" >Encours</label>
                             <input 
                                 type="radio" 
-                                name="phone"
-                                required/>
+                                name="label"
+                                onChange={e=>this.handleChange(e)} 
+                                value="En cours"
+                                checked = {label === "En cours"}
+                                />
                             <label htmlFor="name"  className="label-namee" >Terminé</label>
                             <input 
                                 type="radio" 
-                                name="phone"
-                                required/>
+                                name="label"
+                                value="Terminé"
+                                checked = {label === "Terminé"}
+                                onChange={e=>this.handleChange(e)} 
+                                />
                             <label htmlFor="name"  className="label-namee" >A faire</label>
                             <input 
                                 type="radio" 
-                                name="phone"
-                                required/>
+                                name="label"
+                                onChange={e=>this.handleChange(e)} 
+                                checked = {label === "A faire"}
+                                value="A faire"
+                                />
                         </div>
                         <div className="form-select">
                             <div className="box-select box">
-                                <select>
-                                    <option value = "back"> Projet</option> 
-                                    <option value = "back"> Illustrator</option> 
+                                <select value={title_project}>
+                                    <option selected value = "back"> Selectionner un projet </option> 
+                                    <option value = "title_project"> Projet</option> 
+                                    <option value = "title_project"> Illustrator</option> 
                                 </select>
                             </div>
                         </div>

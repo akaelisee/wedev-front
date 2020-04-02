@@ -3,6 +3,31 @@ import {Link} from 'react-router-dom'
 
 
 export class FormEditSprint extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             id : '',
+             title : '',
+             title_project: '', //Titre project
+             description : '',
+             label : '', //Label status
+             completion_time : ''
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange =(e)=>{
+        console.log(e.target.value)
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('d');
+	}
     render() {
         return (
             <div className="add-sprint">

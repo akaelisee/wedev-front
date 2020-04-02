@@ -4,6 +4,19 @@ import ImageGrey from '../../assets/img/Capture.PNG'
 import {Link} from 'react-router-dom';
 
 export class ListSprint extends Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            id : '',
+            title : '',
+            title_project: '', //Titre project
+            description : '',
+            label : '', //Label status
+            completion_time : ''
+        }
+    }
     render() {
         return (
             <>

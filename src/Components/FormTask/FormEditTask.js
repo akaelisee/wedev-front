@@ -2,6 +2,31 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
 export class FormEditTask extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            id : '',
+            description : '',
+            start_date : '',
+            end_date : '',
+            label : '', //Label status
+            title : '' // title sprint
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange =(e)=>{
+        console.log(e.target.value)
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('d');
+	}
     render() {
         return (
             <div className="add-task">
