@@ -14,7 +14,6 @@ export class FormEditSprint extends Component {
              label : '', //Label status
              completion_time : ''
         }
-        this.handleChange = this.handleChange.bind(this)
     }
 
     handleChange =(e)=>{
