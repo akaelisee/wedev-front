@@ -15,7 +15,6 @@ export class Task extends Component {
             label : '', //Label status
             title : '' // title sprint
         }
-        this.handleChange = this.handleChange.bind(this)
     }
     render() {
         return (
