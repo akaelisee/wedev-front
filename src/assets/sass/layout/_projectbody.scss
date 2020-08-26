@@ -8,11 +8,16 @@
     z-index: 1;
 }
 
-.project-outils{
-    width: 80%;
+.project-outils{    
+    width: 85%;
+    @media only screen and (max-width: 868px){
+        width: 90%;
+        padding-top: 50px;
+    }
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     padding-top: 100px;
 
     .outils{
@@ -23,25 +28,34 @@
             font-size: 32px;	
             font-weight: bold;
             margin: 0;
+            @media only screen and (max-width: 1200px){
+                font-size: 28px;
+            }
+        }
+        .lien-info{
+            color: $colorGreenSea;
+            letter-spacing: 2px;
+            font-family: $fontMontserrat;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .text-outil-down{
+            margin-top: 30px;
+            color: $colorBlack;	
+            font-family: $fontMontserrat;
+            font-size: 18px;
+            @media only screen and (max-width: 1200px){
+                font-size: 16px;
+            }
         }
     }
 
-    .lien-info{
-        color: $colorGreenSea;
-        letter-spacing: 2px;
-        font-family: $fontMontserrat;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 15px;
-    }
-    .text-outil-down{
-        margin-top: 30px;
-        color: $colorBlack;	
-        font-family: $fontMontserrat;
-        font-size: 18px;
-    }
 
     .projetsprint{
+        @media only screen and (max-width: 868px){
+            margin-top: 35px;
+        }
         label{
             font-size: 38px;
             color: $colorWhite;
@@ -50,28 +64,51 @@
             background-color: $colorGreenSea;
             float: left;
             padding: 10px 23px;
+            @media only screen and (max-width: 1200px){
+                font-size: 28px;
+                padding: 10px 20px;
+                @media only screen and (max-width: 868px){
+                    font-size: 18px;
+                    padding: 10px 16px;
+                }
+            }
         }
 
         p{
+            width: 90%;
             margin: 0;
             padding-left: 120px;
             font-size: 18px;
-            width: 78%;
+            @media only screen and (max-width: 868px){
+                padding-left: 60px;
+                font-size: 16px;
+            }
         }        
         .position{
             color: $colorBlack;
-            font-family: '$fontPoppins:';
+            font-family: $fontPoppins;
             font-size: 29px;
             font-weight: bold;
-            line-height: 60px;
+            line-height: 65px;
             padding-bottom: 15px;
+            @media only screen and (max-width: 1200px){
+                line-height: 59px;
+                font-size: 25px;
+                @media only screen and (max-width: 868px){
+                    line-height: 45px; 
+                    font-size: 22px;
+                    padding-bottom: 10px;
+                    padding-left: 60px;
+
+                }
+            }
         }
         .sprint{
-            padding-top: 39px;
+            padding-top: 30px;
         }
         .taches{
-            padding-top: 39px;
-            padding-bottom: 120px;
+            padding-top: 30px;
+            padding-bottom: 100px;
         }
     }
 }

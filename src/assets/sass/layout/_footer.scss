@@ -6,14 +6,31 @@ footer{
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    @media only  screen  and (max-width : 670px)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
     height: 110px;
     position: relative;
-    z-index: 2;
     .logo-footer{
         padding-left: 40px;
+        @media only  screen  and (max-width : 470px)
+        {
+            padding-left: 15px;     
+        }
+        img{
+            @media only  screen  and (max-width : 800px)
+            {
+                width: 150px;
+            }
+        }
     }
     .copy{
         text-align: center;
+        @media only  screen  and (max-width : 670px)
+        {
+            display: none;
+        }
         p{
             margin: 0;	
             color: $colorWhite;	
@@ -26,6 +43,10 @@ footer{
     .social-footer{
         text-align: end;
         padding-right: 40px;
+        @media only  screen  and (max-width : 470px)
+        {
+            padding-right: 15px;     
+        }
         ul{
             padding: 0;
             margin: 0;
@@ -33,10 +54,8 @@ footer{
             li{
                 display: inline-block;
                 list-style: none;
-                padding: 10px;
-
-               
-
+                padding: 6px;
+                
                 a{
                     padding: 10px;
                     border: 2px solid $colorWhite;
@@ -45,6 +64,10 @@ footer{
                 }
                 .facebook{
                     padding: 12px 16px;
+                    @media only  screen  and (max-width : 800px)
+                    {
+                        padding: 10px 14px;    
+                    }
                     
                     &:hover{
                         color: $colorFacebook;
@@ -53,6 +76,11 @@ footer{
                 }
                 .linkedin{
                     padding: 12px 14px;
+                    @media only  screen  and (max-width : 800px)
+                    {
+                        padding: 10px 12px;    
+                    }
+                    
                     &:hover{
                         color: $colorLinkedin;
                         border: 2px solid $colorLinkedin;
@@ -61,6 +89,10 @@ footer{
                 }
                 .twitter{
                     padding: 12px 13px;
+                    @media only  screen  and (max-width : 800px)
+                    {
+                        padding: 10px 11px;    
+                    }
                     &:hover{
                         color: $colorTwitter;
                         border: 2px solid $colorTwitter;

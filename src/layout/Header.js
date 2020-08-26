@@ -9,8 +9,6 @@ import Login from '../pages/Login'
       super(props)
   
       this.state = {
-        scrolled : false,
-        scrolledLeft : false,
         showPopup : false
       }
       this.togglePopup = this.togglePopup.bind(this);
@@ -34,17 +32,15 @@ import Login from '../pages/Login'
         return (
           //Header
             <div className = "header__main">
-              <div className="header-fixed">
-                  <nav className = {this.state.scrolled ? 'scroll' : 'header-nav'}>
-                    <div className = "logo">
-                      <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
-                    </div>
-                    <div className = "login_button">
-                        <Link to="" onClick = {this.togglePopup} className="login-link"> Login </Link>
-                    </div>
-                  </nav>
-                  {this.state.showPopup ? <Login popUp={this.closePopup}/>: null}
-              </div>  
+              <nav className ="header-nav">
+                <div className = "logo">
+                  <Link to = "/" className="logo-lien"> <img src = { logo } alt ="" /> </Link> 
+                </div>
+                <div className = "login_button">
+                    <Link to="" onClick = {this.togglePopup} className="login-link"> Login </Link>
+                </div>
+                {this.state.showPopup ? <Login popUp={this.closePopup}/>: null} 
+              </nav>
               <div className = "header-inscrit">
                   <div className = "header-desc">
                     <p> Où que vous soyez </p>
@@ -55,7 +51,7 @@ import Login from '../pages/Login'
               <div className = "header-down">
                 <div className = "social">
                   <ul>
-                    <li> <a href = "/" className = "facebook iconbtn"> <i className="fab fa-facebook-f"></i> </a> </li>
+                    <li> <a href = "/" className ="facebook iconbtn"> <i className="fab fa-facebook-f"></i> </a> </li>
                     <li> <a href = "/" className ="twitter iconbtn"> <i className="fab fa-twitter"></i> </a> </li>
                     <li> <a href = "/" className="linkedin iconbtn"> <i className="fab fa-linkedin-in"></i> </a> </li>
                   </ul>
@@ -63,12 +59,7 @@ import Login from '../pages/Login'
                 <div className = "btn-selector">
                   <ul className = "btn-item">
                     <li> 
-                        <a href = "/" className="active"> Explore <span> <i className="fas fa-chevron-down"></i> </span></a>
-                        <ul className="sousMenu">
-                          <li> <a href = "/"> Composants </a>  </li>
-                          <li> <a href = "/"> Composants </a> </li>
-                          <li> <a href = "/"> Composants </a> </li>
-                        </ul>
+                        <a href = "/" className="active"> <span> Explore </span> <i className="fas fa-chevron-down"></i></a>
                     </li>
                   </ul>
                 </div> 

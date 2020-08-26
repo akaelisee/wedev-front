@@ -10,8 +10,8 @@ export default class FinalBody extends Component {
                             <label>OFFRE DE LANCEMENT</label>
                         </div>
                         <div className="text-final">
-                            <p>inscrivez-vous et recevez prochainement</p>
-                            <p>un accès premium à l'application WeAreData</p>
+                            <p>inscrivez-vous et recevez prochainement <br /> un accès premium à l'application WeAreData </p>
+                            {/* <p></p> */}
                         </div>
                         <div className="button-final">
                             <Link to ="/inscription" className="lien"> JE M'INSCRIS </Link>

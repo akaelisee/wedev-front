@@ -5,38 +5,51 @@
     background-image: url("../../img/bg-img.png");
     // background-size: cover;
     background-size: 100%  800px;
-    height: 900px;
+    height: 767px;
     background-repeat: no-repeat;
     background-position: bottom center;
-    padding-top: 300px;
     background-attachment: fixed;
     position: relative;
-    z-index: 2;
     .card-final{
+        position: absolute;
+        top: 27%;
+        bottom: 25%;
+        right: 12%;
+        left: 12%;
         background-color : $colorWhite;
-        width: 70%;
-        margin: 0 auto;
+        padding: 15px;
+        @media only  screen  and (max-width : 480px)
+        {
+            padding: 5px;
+            @media only  screen  and (max-width : 430px)
+            {
+                width: 300px;
+                 margin: 0 auto;
+            }
+        }
         box-shadow: 3px 3px 30px $colorBlack;
-        height: 340px;
         text-align: center;
 
         .title-final{
-            padding-top: 96px;
+            padding-top: calc(80px - 15px); 
 
             label{
-                // color: $colorEmeraud;
                 color: $colorGreenSea;
                 font-family: $fontMontserrat;
                 font-size: 23px;
                 font-weight: bold;
                 letter-spacing: 2px;
+                @media only  screen  and (max-width : 580px)
+                {
+                    font-size: 20px;                   
+                }
             }
         }
 
         .text-final{
             padding-top: 25px;
             p{
-                // width: 50%;
+                width: 100%;
                 margin: 0 auto;
                 color: $colorBlack;
                 font-family: $fontPoppins;
@@ -44,16 +57,20 @@
                 font-weight: 600;
                 line-height: 30px;
                 text-align: center;
+                @media only  screen  and (max-width : 580px)
+                {
+                    line-height: 30px;
+                    font-size: 15px;                   
+                }
             }
         }
 
         .button-final{
             
             margin: 0 auto;
-            padding-top: 55px;
+            padding: 45px 0;
 
             .lien{
-                // width: 181px;
                 color: $colorWhite;
                 text-decoration: none;
                 background-color: $colorEmeraud;

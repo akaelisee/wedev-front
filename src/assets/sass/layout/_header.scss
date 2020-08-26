@@ -2,93 +2,81 @@
 @import '../theme/font';
 
 .header__main{
+    position: relative;
     background-image: url("../../img/hero.png");
     background-size: cover;
-    // background-attachment: fixed;
     background-position: top center;
-    height: 100vh;
+    height: 767px;
 
-    .header-fixed{
-        position: relative;
-        z-index: 4;
-    }
     //navbar
     .header-nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
         transition: 0.4s;
-        z-index: 4;
-    }
-
-    .logo{
-        padding-top: 20px;
-        padding-left: 25px;
-
-        .logo-lien{
-           
-            img{   
+        .logo{
+            padding-top: 20px;
+            padding-left: 25px;
+            .logo-lien{   
+                img{   
+                    @media only  screen  and (max-width : 860px)
+                    {
+                        width: 150px;
+                        height: 30px;
+                    }
+                }
+            }   
+        }
+        .login_button{
+            padding-top: 35px;
+            padding-right: 25px;
+    
+            @media only  screen  and (max-width : 860px)
+            {
+                padding-top: 28px;
+            }
+    
+            a{
+                font-family: $fontMontserrat;
+                padding: 15px 50px;
+                background: none;
+                border: 2px solid $colorDarkBlue;
+                border-radius: 27.5px;
+                font-size: 14px;
+                color: $colorBlack;
+                letter-spacing: 4.44px;
+                text-decoration: none;
+                transition: 0.5s;
+                cursor: pointer;
+                font-weight: 600;
+                outline: none;
+    
                 @media only  screen  and (max-width : 860px)
                 {
-                    width: 150px;
-                    height: 30px;
+                    padding: 10px 30px;
+                    font-size: 15px;
+                }
+    
+                &:hover{
+                    background: #e6eaec;
+                    color: $colorBlack;
+                    transition: 0.5s;
                 }
             }
         }
-        
-    }
-    .login_button{
-        padding-top: 35px;
-        padding-right: 25px;
-
-        @media only  screen  and (max-width : 860px)
-        {
-            padding-top: 28px;
-        }
-
-        a{
-            font-family: $fontMontserrat;
-            padding: 15px 50px;
-            background: $colorLightGrey;
-            border: 2px solid $colorDarkBlue;
-            border-radius: 27.5px;
-            font-size: 14px;
-            color: $colorBlack;
-            letter-spacing: 4.44px;
-            text-decoration: none;
-            transition: 0.5s;
-            cursor: pointer;
-            font-weight: 600;
-            outline: none;
-
-            
-            @media only  screen  and (max-width : 860px)
-            {
-                padding: 10px 30px;
-                font-size: 15px;
-            }
-
-            &:hover{
-                background: rgb(228, 232, 233);
-                color: $colorBlack;
-                transition: 0.5s;
-            }
-        }
-    }
-
     }
     .header-inscrit{
-       position: absolute;
-       top: 250px;
-       left: 80px;
-       transition: .2s;
-       z-index: 0;
-
-       .header-desc{
-            // padding-left: 110px;
+        position: absolute;
+        width: 60%;
+        top: 250px;
+        left: 80px;
+        transition: .2s;
+        @media only  screen  and (max-width : 480px)
+        {
+            left: 20px;
+        }
+        .header-desc{
             font-family: $fontMontserrat;
-            transition: 0.2s;
-
             p{
                 color: $colorBlueBlack;
                 font-family: $fontMontserrat;
@@ -99,8 +87,11 @@
 
                 @media only  screen  and (max-width : 860px)
                 {
-                   transition: all 0.4s;
-                   font-size: 25px;
+                    font-size: 25px;
+                    @media only  screen  and (max-width : 460px)
+                    {
+                        font-size: 20px;
+                    }
                 }
 
                 span{
@@ -111,6 +102,10 @@
                     {
                         transition: all 0.4s;
                         font-size: 30px;
+                        @media only  screen  and (max-width : 460px)
+                        {
+                            font-size: 25px;
+                        }
                     }
                 }
                 &:nth-child(2){
@@ -136,6 +131,13 @@
                     font-size: 13px;
                     padding: 10px 18px;
                     letter-spacing: 3.44px;	
+                    @media only  screen  and (max-width : 460px)
+                    {
+                        transition: all 0.4s;
+                        font-size: 13px;
+                        padding: 10px 15px;
+                        letter-spacing: 2.5px;	
+                    }
                 }
 
                 &:hover{
@@ -143,30 +145,35 @@
                     border: 2px solid $bgBlue;
                 }
             }
-       }
+        }
     }
-
     .header-down{
         position: relative;
-        top: 80%;
+        top: 40rem;
 
         .social{
             float: left;
-
-            @media only  screen  and (max-width : 860px)
+            @media only  screen  and (max-width : 580px)
             {
-                background-color: red;
+                
             }
 
             ul{
                 list-style: none;
-                padding: 0;
                 padding-left: 40px;
-                position: absolute;
+
+                @media only  screen  and (max-width : 500px)
+                {
+                    padding-left: 0px;     
+                }
 
                 li{
                     display: inline-block;
                     padding-left: 30px;
+                    @media only  screen  and (max-width : 500px)
+                    {
+                        padding-left: 20px;     
+                    }
 
                     a{
                         border: 2px solid #fff;
@@ -185,17 +192,19 @@
                             content: " ";
                             position: absolute;
                             left: 0;
-                            top: 0;
-                            width: 42.46px;
-                            height: 41.47px;
+                            right: -1px;
+                            left: -1px;
+                            top: -1px;
+                            height: 45.5px;
                             background: $colorBlue;
                             border-radius: 50%;
                             transform: scale(0);
-                            transition: .4s ease-in-out;
+                            transition: .4s ease-in;
                             z-index: -1;
                         }
                         
                         &:hover::before{
+                            transition: .4s ease-out;
                             transform: scale(1);
                         }
                     }
@@ -206,39 +215,46 @@
                         padding: 12px 14px;
                     }
                     .twitter{
-                        padding: 12px 13px;
-
+                        padding: 12px 13.5px;
                     }
                 }
             }
         }
-    }
-    .btn-selector{
-        float: right;
-        padding-right: 50px !important;
-        margin: 0;
-        padding: 0;
-
+        .btn-selector{
+            float: right;
+            padding-right: 50px !important;
+        
             li {
                 list-style: none;
-                position: relative;
-
-            .active{
-                color: $colorWhite;
-                font-family: $fontMontserrat;
-                font-weight: bold;
-                border: 1px solid $colorWhite;
-                border-radius: 27.5px;
-                padding: 12px 25px;
-                letter-spacing: 3.44px;
-                text-decoration: none;
-
-                span{
-                    padding-left: 15px;
+                .active{
+                    color: $colorWhite;
+                    font-family: $fontMontserrat;
+                    font-weight: bold;
+                    border: 2px solid $colorWhite;
+                    border-radius: 27.5px;
+                    padding: 12px 25px;
+                    letter-spacing: 3.44px;
+                    text-decoration: none;
+                    @media only  screen  and (max-width : 580px)
+                    {
+                        padding: 12px 14px;
+                        border-radius: 50%;
+                        border: 2px solid $colorWhite;
+                    }
+                    span{
+                        padding-right: 15px;
+                        @media only  screen  and (max-width : 580px)
+                        {
+                            padding: 0 !important;
+                            display: none;
+                        }
+                    }
                 }
-            }
+            }   
         }
-        .sousMenu{
-            display: none;
-        }   
     }
+}
+
+
+
+
